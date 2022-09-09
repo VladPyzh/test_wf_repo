@@ -24,7 +24,6 @@ jobs:
       run: |
         conda config --add channels conda-forge 
         conda create --name new_env --file requirements.txt
-	conda activate new_env        
     - name: Lint with flake8
       run: |
         conda install flake8

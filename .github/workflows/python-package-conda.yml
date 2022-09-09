@@ -23,8 +23,9 @@ jobs:
     - name: Install dependencies
       run: |
         conda config --add channels conda-forge 
-        conda create --name new_env --file requirements.txt
-        conda activate new_env
+        # conda create --name new_env --file requirements.txt
+        # conda activate new_env
+        conda env update --file requirements.txt --name base
     - name: Lint with flake8
       run: |
         conda install flake8
